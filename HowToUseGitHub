@@ -1,13 +1,13 @@
-DOWNLOAD AND INSTALL GIT
+*****DOWNLOAD AND INSTALL GIT*****
 
 sudo apt-get install git
 
-CONFIGURE YOUR GIT TO CONNECT WITH ACCOUNT
+*****CONFIGURE YOUR GIT TO CONNECT WITH ACCOUNT*****
 
 git config --global user.name "lab2272"
 git config --global user.email "winkleac@dukes.jmu.edu"
 
-CREATE A LOCAL REPO FOR WORK
+*****CREATE A LOCAL REPO FOR WORK*****
 
 git init HSSim
 
@@ -15,22 +15,29 @@ git init HSSim
 
 cd HSSim
 
-PULL FILES TO LOCAL REPO FROM GITHUB REPO
+*****PULL FILES TO LOCAL REPO FROM GITHUB REPO*****
 
 git pull
 
 [once files are pulled from github repo and local repo is synced, add new files to ~/HSSim that you want to push to github repo and proceed to next step]
 
-ADDING REPO FILES TO AN INDEX
+*****ADDING REPO FILES TO AN INDEX*****
 
 git add [filename]
 
-COMMIT CHANGES MADE TO INDEX
+*****COMMIT CHANGES MADE TO INDEX*****
 
 git commit -m "some comment about files here"
 
 git remote add origin https://github.com/lab2272/HSSim.git
 
-PUSHING FILES IN LOCAL REPO TO GITHUB REPO
+*****PUSHING FILES IN LOCAL REPO TO GITHUB REPO*****
 
 git push origin master
+
+*****NOTE*****
+A common error I've encountered is when attempting to use the "git remote add" command the system responds with "fatal: remote origin already exists". the only fix for this error is to type in the terminal:
+
+git remote rm origin
+
+and hit enter. I'll update this tutorial later on if I'm able to find a more permanent solution, because this is the only one I know of currently and it seems that you have to do it every time you attempt to commit something to the github repo.
