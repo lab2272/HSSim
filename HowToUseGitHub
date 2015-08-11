@@ -1,0 +1,36 @@
+DOWNLOAD AND INSTALL GIT
+
+sudo apt-get install git
+
+CONFIGURE YOUR GIT TO CONNECT WITH ACCOUNT
+
+git config --global user.name "lab2272"
+git config --global user.email "winkleac@dukes.jmu.edu"
+
+CREATE A LOCAL REPO FOR WORK
+
+git init HSSim
+
+[HSSim is the name of whatever you want your working repo to be, in our case I decided to call it "HSSim"]
+
+cd HSSim
+
+PULL FILES TO LOCAL REPO FROM GITHUB REPO
+
+git pull
+
+[once files are pulled from github repo and local repo is synced, add new files to ~/HSSim that you want to push to github repo and proceed to next step]
+
+ADDING REPO FILES TO AN INDEX
+
+git add [filename]
+
+COMMIT CHANGES MADE TO INDEX
+
+git commit -m "some comment about files here"
+
+git remote add origin https://github.com/lab2272/HSSim.git
+
+PUSHING FILES IN LOCAL REPO TO GITHUB REPO
+
+git push origin master
